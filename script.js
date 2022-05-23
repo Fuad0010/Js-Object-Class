@@ -38,8 +38,33 @@ console.log(result);
 //#region Task2
 // Custom bir array classi yaradin. 
 // Hemin arrayin find ve push metodu olsun. 
-// Taski ishleyib turn in edin.
 
 
+class CustomArray{
+    constructor(arr){
+    this.arr=arr;
+    }
+    Push1(num){
+        this.arr.push(num);
+        return this;
+    }
+
+
+    Find(num){
+        for (let i = 0; i < this.arr.length; i++) {
+            if (this.arr[i]==num) {
+                return num;
+            }
+            else{
+                console.log("Haven't number in this array.");
+            }   
+        }   
+    }
+}
+
+var PushAndFind = new CustomArray([2,4,6]).Push1(8).Find(2);
+
+
+console.log(PushAndFind);
 
 //#endregion
